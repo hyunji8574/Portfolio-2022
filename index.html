@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night To Light | Portfolio</title>
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- 
+        라이브러리
+     -->
+    <script src="js/lib/scrollmagic/minified/ScrollMagic.min.js"></script>
+    <script src="js/lib/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+    <script src="js/lib/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+    <script src="js/lib/tweenmax/gsap.min.js"></script>
+    <script src="js/lib/tweenmax/ScrollToPlugin.min.js"></script>
+    <script src="js/lib/tweenmax/ScrollTrigger.min.js"></script>
+
+    <!-- 
+        스크립트
+     -->
+    <script src="js/index.js"></script>
+
+</head>
+
+<body>
+    <!-- 프로젝트 팝업창 -->
+    <!-- 
+        스크립트에 의해 데이터가 불러와지므로
+        공백인채로 둘 것
+     -->
+    <div class="project-popup">
+        <div class="project-popup-inner">
+            <div class="btn-esc">
+                <img src="img/btn-esc.png" alt="btn-esc">
+            </div>
+            <div class="project-img">
+                <img class="data-img" src="img/projects/alice-img.jpg" alt="data-img">
+            </div>
+            <div class="project-contents">
+                <h2 class="data-title"></h2>
+                <table class="info">
+                    <tbody>
+                        <tr>
+                            <th>기간</th>
+                            <td class="data-time"></td>
+                        </tr>
+                        <tr>
+                            <th>참여도</th>
+                            <td class="data-cont"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="line"></div>
+                <div class="data-text"></div>
+                <div class="data-tags"></div>
+                <div class="btn-go-site">
+                    <a href="#" target="_blank">사이트 보러가기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 사이드 메뉴 영역 -->
+    <!-- 사이드 메뉴 버튼
+        50px 50px fixed -->
+    <div class="btn-lnb">
+        <div class="btn-lnb-bar bar1"></div>
+        <div class="btn-lnb-bar bar2"></div>
+        <div class="btn-lnb-bar bar3"></div>
+    </div>
+    <nav class="lnb">
+        <ul>
+            <li><a href="#index">Home</a></li>
+            <li><a href="#intro">Intro</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#outro">Outro</a></li>
+        </ul>
+    </nav>
+    <!-- 각 섹션 영역 -->
+
+    <!-- 인덱스 메인 fix -->
+    <!-- <div class="index-fix"></div> -->
+
+    <!-- 인덱스 메인 영역 -->
+    <section id="index" class="index clear-both">
+        <div class="index-inner">
+
+            <!-- 애니메이션 배경 영역 -->
+            <div class="floor"></div>
+            <div class="moon">
+                <img src="img/moon.svg" alt="moon">
+            </div>
+            <div class="stars">
+                <img src="img/stars.svg" alt="starts">
+            </div>
+            <div class="city1">
+                <!-- <img src="img/city-dep3.svg" alt="city-dep3"> -->
+            </div>
+            <div class="city2">
+                <!-- <img src="img/city-dep2.svg" alt="city-dep2"> -->
+            </div>
+            <div class="city3">
+                <!-- <img src="img/city-dep1.svg" alt="city-dep1"> -->
+            </div>
+            <!-- 텍스트 영역 -->
+            <span class="text top right">Hyunji’s Web Portfolio</span>
+            <div class="line"></div>
+            <span class="text bottom right">2021 08</span>
+            <span class="text bottom left">2021 &copy; hyunji8574.com</span>
+            <div class="grid">
+                <!-- 캐치프레이즈 영역 -->
+                <div class="title-wrap">
+                    <h1 class="title">NIGHT TO LIGHT</h1>
+                </div>
+                <!-- 스크롤 다운 버튼 -->
+                <div class="btn-scroll-down">
+                    <a href="#intro">아래로 내려 살펴보기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 인트로 영역 -->
+    <section id="intro" class="section intro clear-both">
+        <div class="grid-title">
+            <!-- 각 섹션 타이틀 -->
+            <h2 class="section-title">
+                Intro
+            </h2>
+            <div class="grid">
+                <!-- 인사말 -->
+                <p class="hello-en">Hello! I’m <span class="line">Hyunji</span></p>
+                <p class="hello-ko">만나서 반가워요!</p>
+                <div class="line-center"></div>
+                <div class="building">
+                    <img src="img/building.svg" alt="building">
+                </div>
+                <div class="info">
+                    <p>안녕하세요!<br>
+                        저는 세련된 UI와 매력적인 UX를 구현하는 웹 퍼블리셔입니다.</p>
+                    <p>UI를 효율적으로, 탄탄하게 구현할 뿐만 아니라<br>
+                        사이트의 개성을 잘 드러내면서 사용자와의 상호작용을 이끌어내는 것을 좋아합니다.</p>
+                    <p>더 잘 만들기 위해서 무엇이 필요한지 항상 고민하고,<br>
+                        다른 이들에게서 본받을 만한 점을 찾으면서 성장하는 것도 하나의 큰 즐거움입니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 어바웃 영역 -->
+    <section id="about" class="section about clear-both">
+        <div class="grid-title">
+            <!-- 각 섹션 타이틀 -->
+            <h2 class="section-title -about">
+                About
+            </h2>
+            <h2 class="section-title -skills">
+                Skills
+            </h2>
+            <div class="grid">
+                <!-- 배경 -->
+                <div class="moon-big">
+                    <img src="img/moon-big.svg" alt="moon-big">
+                </div>
+                <!-- <div class="city-about"></div> -->
+                <!-- 업무 스킬 소개 -->
+                <ul class="about-list">
+                    <li>
+                        <p class="list-title">Design</p>
+                        <p class="list-text">브랜드의 아이덴티티가 잘 담긴<br>
+                            디자인을 위해 항상 고민해요</p>
+                    </li>
+                    <li>
+                        <p class="list-title">Coding</p>
+                        <p class="list-text">직관적인 이름을 사용하고<br>
+                            주석을 달아 수정하기 쉽도록 만들어요</p>
+                    </li>
+                    <li>
+                        <p class="list-title">Co-Work</p>
+                        <p class="list-text">원활한 작업을 위해<br>
+                            다른 사람들과 소통해요</p>
+                    </li>
+                    <li>
+                        <p class="list-title">Interaction</p>
+                        <p class="list-text">사용자와 상호작용을 통해<br>
+                            좋은 UX를 만들어요</p>
+                    </li>
+                    <li>
+                        <p class="list-title">Study</p>
+                        <p class="list-text">역량을 더 쌓기 위해<br>
+                            새로운 것을 배우는 데 노력해요</p>
+                    </li>
+                </ul>
+
+                <!-- 작업 스킬 차트 -->
+                <ul class="skills-list">
+                    <li>
+                        <span class="skill-title">Ps/Ai</span>
+                        <span class="skill-sub-title">Desgin</span>
+                        <span class="skill-percent">80%</span>
+                        <div class="skill-bar"></div>
+                        <div class="skill-line"></div>
+                    </li>
+                    <li>
+                        <span class="skill-title">HTML/CSS/SCSS</span>
+                        <span class="skill-sub-title">Development</span>
+                        <span class="skill-percent">90%</span>
+                        <div class="skill-bar"></div>
+                        <div class="skill-line"></div>
+                    </li>
+                    <li>
+                        <span class="skill-title">JavaScript/JQuery</span>
+                        <span class="skill-sub-title">Development</span>
+                        <span class="skill-percent">70%</span>
+                        <div class="skill-bar"></div>
+                        <div class="skill-line"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 프로젝트 영역 -->
+    <section id="projects" class="section projects clear-both">
+        <div class="grid-title">
+            <!-- 각 섹션 타이틀 -->
+            <h2 class="section-title">
+                Projects
+            </h2>
+            <div class="grid">
+                <ul class="project-list">
+                    <li>
+                        <div class="project-item" data-title="Alice" data-color="#ff5656" data-time="2~3주"
+                            data-cont="퍼블리싱 90% / 기획·디자인 40%" data-tags="#팀프로젝트 #퍼블리싱 #Zeplin"
+                            data-img="img/projects/alice-img.jpg" data-url="sub/alice/index.html" data-text="
+                            앨리스는 영어 원서를 전문적으로 취급하는 가상의 브랜드 입니다.<br>
+                            전반적인 퍼블리싱과 디자인 작업을 수행했으며 편리한 레이아웃 작업을 위해 
+                            Zeplin을 이용했습니다.<br>
+                            <br>
+                            모두 제각각인 책 사이즈의 통일을 위해 백그라운드 이미지로 작업했고 
+                            팀원들의 코드 통합과정에서 생기는 충돌과 오류를 해결하는데에<br>
+                            많은 기여를 했습니다.        
+                            ">
+                            <div class="project-list-icon">
+                                <img src="img/symbols/alice.svg" alt="alice">
+                            </div>
+                            <a href="#" class="project-list-title">Alice</a>
+                            <div class="line"></div>
+                            <p class="project-list-tags">#팀 프로젝트 #퍼블리싱</p>
+                        </div>
+                        <div class="project-item" data-title="Areum" data-color="#ffb31f" data-time="2주"
+                            data-cont="전체 100%" data-tags="#브랜딩 #전처리기 #반응형" data-img="img/projects/areum-img.jpg"
+                            data-url="sub/areum/index.html" data-text="
+                            아름은 가상의 반려동물 라이프 전문 브랜드 입니다.<br>
+                            메인페이지와 브랜드 소개 페이지 두 페이지 모두
+                            어느 디바이스에서든 잘 볼 수 있도록 반응형으로 작업했습니다.<br>
+                            <br>
+                            레이아웃 정리에는 flex-box를 주로 이용하였으며, 보다 효율적이고 편한 스타일 정리를 위해
+                            전처리기(SCSS)를 사용하였습니다.<br>                            
+                            ">
+                            <div class="project-list-icon">
+                                <img src="img/symbols/areum.svg" alt="areum">
+                            </div>
+                            <a href="#" class="project-list-title">Areum</a>
+                            <div class="line"></div>
+                            <p class="project-list-tags">#브랜딩 #전처리기 #반응형</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="project-item" data-title="Korea National Park" data-color="#2e76ae" data-time="1주"
+                            data-cont="전체 100%" data-tags="#리뉴얼 #공공기관" data-img="img/projects/knp-img.jpg"
+                            data-url="sub/nationalPark/index.html" data-text="
+                            국립공원공단 홈페이지 리뉴얼 프로젝트입니다.<br>
+                            기존의 가독성이 나쁘고 오래된 디자인을 깔끔하게 바꾸었고
+                            컨텐츠를 중시해 애니메이션은 배제하여 작업하였습니다.<br>
+                            <br>
+                            우측 지도의 다양한 버튼 레이아웃을 정리하는데 불편함과 번거로움으로 고민하던 중
+                            Zeplin을 처음으로 사용하였고, 그 결과 레이아웃을 쉽고 빠르게 정리할 수 있었습니다.<br>
+                            ">
+                            <div class="project-list-icon">
+                                <img src="img/symbols/knp.svg" alt="knp">
+                            </div>
+                            <a href="#" class="project-list-title">Korea National Park</a>
+                            <div class="line"></div>
+                            <p class="project-list-tags">#리뉴얼 #공공기관</p>
+                        </div>
+                        <div class="project-item" data-title="Libra" data-color="#1a184c" data-time="4일"
+                            data-cont="전체 100%" data-tags="#전처리기 #크로스브라우징" data-img="img/projects/libra-img.jpg"
+                            data-url="sub/libra-admin/user-list.html" data-text="
+                            가상의 중고 도서 거래 플랫폼 Libra의 관리자 페이지 프로젝트입니다.<br>
+                            사용자 목록과 사용자 정보 두 페이지를 작업하였으며
+                            기능에 충실한 단순하고 명확한 레이아웃으로 디자인했습니다.<br>
+                            <br>
+                            IE에서 레이아웃이 망가지지 않도록 크로스 브라우징을
+                            고려해서 작업했고, 조금씩 다른 스타일의 테이블 레이아웃을 정리하기 위해서
+                            전처리기를 도입하였습니다.
+                            ">
+                            <div class="project-list-icon">
+                                <img src="img/symbols/libra.svg" alt="libra">
+                            </div>
+                            <a href="#" class="project-list-title">Libra</a>
+                            <div class="line"></div>
+                            <p class="project-list-tags">#전처리기 #크로스브라우징</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="project-item" data-title="Curo" data-color="#95cd94" data-time="1~2주"
+                            data-cont="전체 100%" data-tags="#JQuery #브랜딩" data-img="img/projects/curo-img.jpg"
+                            data-url="sub/curo/index.html" data-text="
+                            Curo는 건강을 생각하는 유기농 식품 브랜드로
+                            다양한 시행착오를 겪으며 제작한 첫 프로젝트 입니다.<br>
+                            <br>
+                            슬라이드, 탭 등의 기능을 구현하기 위해 JQuery를 이용하였습니다.<br>
+                            의도했던 동작과 다른 결과가 나오는 일이 많았고
+                            이를 고치기 위해 많은 노력을 기울였습니다.<br>
+                            ">
+                            <div class="project-list-icon">
+                                <img src="img/symbols/curo.svg" alt="curo">
+                            </div>
+                            <a href="#" class="project-list-title">Curo</a>
+                            <div class="line"></div>
+                            <p class="project-list-tags">#제이쿼리 #브랜딩 #디자인</p>
+                        </div>
+                        <div class="project-item" data-title="StoryTailor" data-color="#f3abb9" data-time="2주"
+                            data-cont="전체 100%" data-tags="#일러스트 #브랜딩 #디자인" data-img="img/projects/storyTailor-img.jpg"
+                            data-url="sub/storyTailor/index.html" data-text="
+                            감성적인 팬시·문구 브랜드 StoryTailor 프로젝트 입니다.<br>
+                            직접 제작한 일러스트를 목업에 활용하며 디자인했고, 원하는 애니메이션을
+                            구현하기 위해 많은 고민을 했습니다.<br> 
+                            <br>
+                            슬라이드 개수에 맞춰 매번 네비게이션 버튼의 개수를 조절해야 하는
+                            상당한 번거로움이 있었는데, 이를 해결하기 위해서
+                            슬라이드 개수에 맞춰 자동으로 네비게이션 버튼이 생성될 수 있도록 했습니다.
+                            ">
+                            <div class="project-list-icon">
+                                <img src="img/symbols/storytailor.svg" alt="storytailor">
+                            </div>
+                            <a href="#" class="project-list-title">StoryTailor</a>
+                            <div class="line"></div>
+                            <p class="project-list-tags">#목업 #브랜딩 #디자인</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 기타 영역 -->
+    <section id="others" class="section others clear-both hidden">
+        <div class="grid-title">
+            <!-- 각 섹션 타이틀 -->
+            <h2 class="section-title">
+                Other Works
+            </h2>
+            <div class="grid">
+                <div class="mobile-ui">
+                    <p class="title">Mobile UI/Icon Design</p>
+                    <ul class="mobile-ui-list">
+                        <li>
+                            <img src="img/mobile-ui-1.png" alt="mobile-ui-1">
+                        </li>
+                        <li>
+                            <img src="img/mobile-ui-2.png" alt="mobile-ui-2">
+                        </li>
+                        <li>
+                            <img src="img/mobile-ui-3.png" alt="mobile-ui-2">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 아웃트로 영역 -->
+    <section id="outro" class="section outro clear-both">
+        <!-- 각 섹션 타이틀 -->
+        <h2 class="section-title">
+            Outro
+        </h2>
+        <!-- 배경 -->
+        <div class="city-reflected">
+            <!-- <img src="img/city-reflected.svg" alt="city-reflected"> -->
+        </div>
+        <div class="moon-reflected">
+            <img src="img/moon-reflected.svg" alt="moon-reflected">
+        </div>
+        <div class="water">
+            <!-- <img src="img/water.svg" alt="water"> -->
+        </div>
+        <div class="stars">
+            <img src="img/stars.svg" alt="starts">
+        </div>
+        <div class="leaf left">
+            <img src="img/leaf.svg" alt="leaf">
+        </div>
+        <div class="leaf-double left">
+            <img src="img/leaf-double.svg" alt="leaf-double">
+        </div>
+        <div class="leaf right">
+            <img src="img/leaf.svg" alt="leaf">
+        </div>
+        <div class="leaf-double right">
+            <img src="img/leaf-double.svg" alt="leaf-double">
+        </div>
+        <div class="grid">
+            <!-- 아웃트로 내용 -->
+            <div class="contents">
+                <!-- 아웃트로 타이틀 -->
+                <h2 class="title">Brand new world with you!</h2>
+                <p class="sub-title">저와 좀 더 많은 이야기를 나눠보세요!</p>
+                <!-- 아웃트로 버튼 -->
+                <div class="e-mail">hyunji8574@naver.com</div>
+                <div class="btn-github">
+                    <a href="https://github.com/hyunji8574" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+        <!-- 저작권 표시 -->
+        <p class="copyright">2021 &copy; hyunji8574.com</p>
+    </section>
+
+</body>
+
+</html>

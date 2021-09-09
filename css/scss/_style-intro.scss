@@ -1,0 +1,91 @@
+
+/*
+
+인트로 영역
+
+*/
+
+.intro {
+    position: relative;
+    width: 100%;
+    // height: 1400px;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+
+    .grid {
+        padding: 194px 0 250px 0;
+        box-sizing: border-box;
+    }
+
+    .section-title {
+        position: absolute;
+        color: #0c1124;
+        top: 184px;
+        left: 50px;
+        writing-mode: vertical-lr;
+        &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 128px;
+            left: 0;
+            width: 1px;
+            height: 160px;
+            background-color: #0c1124;
+        }
+    }
+
+    .hello-en {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 6px;
+        font-family: "Asap";
+        color: #5667a4;
+        .line {
+            padding-bottom: 8px;
+            border-bottom: 1px solid #5667a4;
+        }
+    }
+    .hello-ko {
+        text-align: center;
+        font-size: 18px;
+        color: rgba(12, 17, 36, 0.8);
+        margin-top: 52px;
+    }
+    .line-center {
+        width: 78px;
+        height: 1px;
+        background-color: #0c1124;
+        opacity: 0.5;
+        margin: 196px auto 0 auto;
+    }
+
+    .building {
+        position: absolute;
+        bottom: -880px;
+        right: 0;
+        width: 467px;
+        height: 868px;
+        transition: all 1s;
+
+        // 애니메이션 클래스
+        // 클래스 추가시 애니메이션이 나타남
+        &.anim {
+            bottom: -10px;
+        }
+    }
+
+    .info {
+        margin-top: 272px;
+        p {
+            font-size: 18px;
+            margin-bottom: 63px;
+            line-height: 36px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

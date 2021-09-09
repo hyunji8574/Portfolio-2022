@@ -1,0 +1,319 @@
+/*
+
+index 스타일시트
+
+*/
+
+/*
+
+애니메이션
+
+*/
+
+// 달빛
+@keyframes moon-shine {
+    from {
+        filter: brightness(1);
+    }
+    to {
+        filter: brightness(1.1);
+    }
+}
+
+// 별 반짝반짝..
+@keyframes stars-shine {
+    from {
+        filter: brightness(0.5);
+    }
+    to {
+        filter: brightness(1.5);
+    }
+}
+
+/*
+
+사이드 메뉴
+
+*/
+
+.btn-lnb {
+    width: 35px;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    z-index: 1000;
+    &:hover {
+        cursor: pointer;
+        & .bar1 {
+            width: 27px;
+        }
+        & .bar2 {
+            width: 100%;
+        }
+        & .bar3 {
+            width: 27px;
+        }
+    }
+    &-bar {
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        margin-bottom: 11px;
+        background-color: #fff;
+        transition: width 0.2s;
+    }
+    &.black &-bar {
+        background-color: #0c1124;
+    }
+    .bar2 {
+        width: 27px;
+    }
+}
+
+.lnb {
+    position: fixed;
+    top: 0;
+    left: -500px;
+    width: 500px;
+    height: 100vh;
+    background-color: #fff;
+    border-radius: 0 25px 25px 0;
+    z-index: 999;
+    box-shadow: 0 0 62px 0 rgba($color: #0c1124, $alpha: 0.05);
+    padding: 150px 105px 0 105px;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    li {
+        width: 100%;
+        height: 105px;
+        text-align: right;
+        border-bottom: 1px solid rgba($color: #0c1124, $alpha: 0.1);
+        box-sizing: border-box;
+        a {
+            display: block;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 2.4px;
+            line-height: 105px;
+            color: rgba(12, 17, 36, 0.36);
+            transition: color 0.2s;
+            &:hover,
+            &.on {
+                color: #0c1124;
+            }
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    &.on {
+        left: 0;
+    }
+}
+
+/*
+
+index
+인덱스 메인 영역
+
+*/
+
+.index {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    .index-inner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, #0b1434, #010308);
+    }
+
+    .title-wrap {
+        overflow: hidden;
+        .title {
+            position: relative;
+            margin-top: 38vh;
+            font-size: 70px;
+            font-family: "Asap";
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: $letterSpacing240;
+            z-index: 100;
+        }
+    }
+
+    .text {
+        position: absolute;
+        color: #fff;
+        letter-spacing: $letterSpacing100;
+        z-index: 100;
+        &.top {
+            top: 50px;
+        }
+        &.bottom {
+            bottom: 50px;
+        }
+        &.left {
+            left: 50px;
+        }
+        &.right {
+            right: 50px;
+            writing-mode: vertical-rl;
+        }
+    }
+
+    .line {
+        width: 1px;
+        height: 160px;
+        z-index: 100;
+        background-color: #fff;
+        opacity: 0.5;
+        position: absolute;
+        top: 50%;
+        right: 56px;
+        transform: translate(0, -50%);
+        transform-origin: 0 0;
+        @keyframes title-anim-line {
+            from {
+                transform: translate(0, -50%) scaleY(0);
+            }
+            to {
+                transform: translate(0, -50%) scaleY(1);
+            }
+        }
+        animation: title-anim-line 0.5s ease-out;
+    }
+
+    .btn-scroll-down {
+        display: inline-block;
+        position: relative;
+        margin-top: 90px;
+        z-index: 100;
+        a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            padding: 26px 60px;
+            border: 2px solid #fff;
+            border-radius: 35px;
+            box-sizing: border-box;
+            color: #fff;
+            z-index: 100;
+            transition: all 0.2s;
+            &:hover {
+                background-color: #fff;
+                color: #0c1124;
+            }
+        }
+    }
+
+    /*
+
+    인덱스 배경 영역
+
+    */
+
+    .floor {
+        position: absolute;
+        width: 100%;
+        height: 66px;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(
+            90deg,
+            rgba(30, 45, 95, 1) 0%,
+            rgba(86, 103, 164, 1) 20%,
+            rgba(86, 103, 164, 1) 80%,
+            rgba(30, 45, 95, 1) 100%
+        );
+        z-index: 9;
+    }
+
+    .moon {
+        position: absolute;
+        width: 914px;
+        top: -252px;
+        right: 0;
+        z-index: 10;
+        animation: moon-shine 4s ease-in-out infinite alternate;
+    }
+
+    .stars {
+        position: absolute;
+        width: 1789px;
+        top: 55px;
+        right: 66px;
+        z-index: 8;
+        animation: stars-shine 2s linear infinite alternate-reverse;
+    }
+
+    .city1 {
+        position: absolute;
+        width: 100%;
+        height: 361px;
+        bottom: 26px;
+        left: 0;
+        z-index: 5;
+        background: url("../img/city-dep3.svg") 0 bottom repeat-x;
+        background-size: contain;
+        @keyframes slide1 {
+            from {
+                background-position-x: 0;
+            }
+            to {
+                background-position-x: 1920px;
+            }
+        }
+        animation: 15s linear infinite slide1;
+    }
+    .city2 {
+        position: absolute;
+        // width: 1681px;
+        width: 100%;
+        height: 246px;
+        bottom: 34px;
+        // left: 102px;
+        left: 0;
+        z-index: 6;
+        background: url("../img/city-dep2.svg") 0 bottom repeat-x;
+        background-size: contain;
+        @keyframes slide2 {
+            from {
+                background-position-x: 0;
+            }
+            to {
+                background-position-x: 1681px;
+            }
+        }
+        animation: 12s linear infinite slide2;
+    }
+    .city3 {
+        position: absolute;
+        // width: 1606px;
+        width: 100%;
+        height: 212px;
+        bottom: 38px;
+        // left: 157px;
+        left: 0;
+        z-index: 7;
+        background: url("../img/city-dep1.svg") 0 bottom repeat-x;
+        background-size: contain;
+        @keyframes slide3 {
+            from {
+                background-position-x: 0;
+            }
+            to {
+                background-position-x: 1606px;
+            }
+        }
+        animation: 10s linear infinite slide3;
+    }
+}

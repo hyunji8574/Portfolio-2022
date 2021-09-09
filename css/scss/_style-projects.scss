@@ -1,0 +1,101 @@
+/*
+
+프로젝트 영역
+
+*/
+
+.projects {
+    position: relative;
+    background-color: #010308;
+    color: #fff;
+
+    .grid {
+        padding: 530px 0 300px 0;
+        box-sizing: border-box;
+    }
+
+    .section-title {
+        position: absolute;
+        color: #fff;
+        top: 220px;
+        left: 50%;
+        transform: translate(-170px, 0);
+        &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 170px;
+            width: 160px;
+            height: 1px;
+            background-color: #fff;
+        }
+    }
+
+    .project-list {
+        width: 100%;
+        height: 100%;
+        float: left;
+        margin-bottom: 310px;
+        li {
+            float: left;
+            text-align: left;
+            clear: both;
+            margin-bottom: 325px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .project-item {
+                float: left;
+                margin-right: 348px;
+            }
+
+            &:nth-child(even) {
+                float: right;
+                text-align: right;
+                .project-item {
+                    float: left;
+                    margin-right: unset;
+                    margin-left: 348px;
+                }
+            }
+
+            .project-list-icon {
+                display: inline-block;
+                width: 162px;
+                height: 162px;
+                border-radius: 25px;
+                overflow: hidden;
+                transition: all 0.2s;
+                &:hover {
+                    transform: scale(1.1);
+                    cursor: pointer;
+                }
+                img {
+                    pointer-events: none;
+                }
+            }
+            .project-list-title {
+                display: block;
+                margin-top: 35px;
+                font-size: 24px;
+                font-weight: 700;
+                color: #fff;
+            }
+            .line {
+                display: inline-block;
+                width: 248px;
+                height: 1px;
+                opacity: 0.5;
+                margin-top: 15px;
+                background-color: #fff;
+            }
+            .project-list-tags {
+                font-size: 16px;
+                font-weight: 400;
+                margin-top: 18px;
+            }
+        }
+    }
+}
