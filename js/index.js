@@ -170,10 +170,10 @@ window.onload = function () {
 
     var outro_scene = new ScrollMagic.Scene({
         triggerElement: "#outro",
-        offset: 500
-    })
+        triggerHook: 0.1
+        })
         .setTween(outro_anim)
-        .addTo(scrollMagic)
+        .addTo(scrollMagic);
 
     /**
      * 
@@ -203,6 +203,7 @@ window.onload = function () {
     var $project_list_icon = document.querySelectorAll(".project-list-icon"),
         $project_list_title = document.querySelectorAll(".project-list-title"),
         $btn_esc = document.querySelector(".btn-esc"),
+        $btn_esc_white = document.querySelector(".btn-esc-white"),
         $project_popup = document.querySelector(".project-popup");
 
     var $project_item = document.querySelectorAll(".project-item");
@@ -227,6 +228,11 @@ window.onload = function () {
     });
 
     $btn_esc.addEventListener("click", function (e) {
+        $project_popup.classList.remove("on");
+        e.preventDefault();
+    });
+    
+    $btn_esc_white.addEventListener("click", function (e) {
         $project_popup.classList.remove("on");
         e.preventDefault();
     });

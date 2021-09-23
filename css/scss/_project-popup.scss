@@ -30,6 +30,7 @@
     }
 
     .btn-esc {
+        display: block;
         position: absolute;
         top: 50px;
         right: 50px;
@@ -37,6 +38,21 @@
         height: 35px;
         &:hover {
             cursor: pointer;
+        }
+    }
+
+    .btn-esc-white {
+        display: none;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 30px;
+        right: 20px;
+        &:hover {
+            cursor: pointer;
+        }
+        img {
+            width: 100%;
         }
     }
 

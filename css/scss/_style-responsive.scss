@@ -1,0 +1,550 @@
+/*
+
+반응형 스타일
+
+*/
+
+// 1440px 이하
+@media screen and (max-width: 1440px) {
+    .grid {
+        padding: 0 50px;
+    }
+    .lnb {
+        padding: 90px 70px;
+        li {
+            height: 90px;
+            a {
+                font-size: 20px;
+                line-height: 90px;
+            }
+        }
+    }
+
+    .index .title-wrap .title {
+        font-size: 58px;
+    }
+
+    .intro {
+        .grid {
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-bottom: 300px;
+        }
+        .info {
+            margin-top: 170px;
+            width: 60%;
+            p {
+                margin-bottom: 50px;
+            }
+        }
+
+        .building {
+            width: 240px;
+            height: unset;
+            right: 50px;
+        }
+    }
+
+    .about {
+        .moon-big {
+            width: 840px;
+            height: 840px;
+        }
+
+        .about-list {
+            .list-title {
+                margin-top: 20px;
+            }
+            li:nth-child(odd) {
+                left: 50px;
+                transform: translate(0);
+                text-align: left;
+                .list-title {
+                    text-align: left;
+                }
+            }
+            li:nth-child(even) {
+                right: 50px;
+                transform: translate(0);
+                text-align: right;
+                .list-title {
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    .projects {
+        .grid {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        .project-list li .project-item {
+            margin-right: 120px;
+            float: left;
+        }
+        .project-list li:nth-child(even) .project-item {
+            margin-left: 120px;
+            float: right;
+        }
+    }
+
+    .outro {
+        .stars {
+            width: 1200px;
+        }
+        .contents {
+            margin-top: 628px;
+            .title {
+                font-size: 36px;
+                letter-spacing: 7px;
+            }
+        }
+        .moon-reflected {
+            width: 500px;
+            bottom: -80px;
+            right: -90px;
+        }
+    }
+}
+
+// 600px 이하
+@media screen and (max-width: 600px) {
+    .grid {
+        padding: 0 20px;
+    }
+
+    .btn-lnb {
+        top: 30px;
+        left: 20px;
+    }
+
+    .lnb {
+        width: 100%;
+        height: 100%;
+        left: -100%;
+    }
+
+    .index {
+        .title-wrap .title {
+            font-size: 38px;
+            letter-spacing: 10px;
+        }
+
+        .text.top {
+            top: 20px;
+        }
+        .text.bottom {
+            bottom: 20px;
+        }
+        .text.right {
+            right: 20px;
+        }
+        .text.left {
+            left: 20px;
+        }
+        .line {
+            top: 60%;
+            right: 30px;
+            height: 120px;
+        }
+
+        .moon {
+            width: 600px;
+            top: -200px;
+            right: -200px;
+        }
+
+        .stars {
+            width: 100%;
+            top: 130px;
+            right: 0;
+        }
+
+        .btn-scroll-down {
+            margin-top: 60px;
+            a {
+                padding: 21px 36px;
+                font-size: 14px;
+            }
+        }
+
+        .city1,
+        .city2,
+        .city3 {
+            width: 800px;
+        }
+    }
+
+    .intro {
+        .grid {
+            padding-top: 270px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 130px;
+        }
+
+        .section-title {
+            top: 20px;
+            left: 20px;
+            font-size: 16px;
+            &::after {
+                margin-top: -60px;
+                height: 80px;
+            }
+        }
+
+        .hello-en {
+            font-size: 16px;
+            letter-spacing: 8px;
+        }
+        .hello-ko {
+            font-size: 16px;
+        }
+        .line-center {
+            margin-top: 50px;
+        }
+
+        .info {
+            margin-top: 100px;
+            width: 100%;
+            p {
+                font-size: 90%;
+                line-height: 22px;
+            }
+        }
+
+        .building {
+            display: none;
+        }
+    }
+
+    .about {
+        background-size: 1220px, contain, contain;
+        height: 3750px;
+
+        .section-title.-about {
+            right: 20px;
+            top: 20px;
+            font-size: 16px;
+            &::after {
+                margin-bottom: -54px;
+                height: 80px;
+            }
+        }
+
+        .moon-big {
+            width: 400px;
+            height: 400px;
+        }
+        .about-list {
+            li {
+                .list-title {
+                    font-size: 18px;
+                }
+                .list-text {
+                    margin-top: 16px;
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+            }
+            li:nth-child(odd) {
+                left: 20px;
+            }
+            li:nth-child(even) {
+                right: 20px;
+            }
+        }
+
+        .section-title.-skills {
+            right: 20px;
+            bottom: 442px;
+            font-size: 16px;
+            &::after {
+                margin-bottom: -54px;
+                height: 80px;
+            }
+        }
+
+        .skills-list {
+            padding: 0 20px;
+            box-sizing: border-box;
+
+            li:nth-child(1) {
+                height: calc(250px * 0.8);
+            }
+            li:nth-child(2) {
+                height: calc(250px * 0.9);
+            }
+            li:nth-child(3) {
+                height: calc(250px * 0.7);
+            }
+
+            li {
+                .skill-title {
+                    left: 30px;
+                    font-size: 16px;
+                }
+                .skill-sub-title {
+                    bottom: 2px;
+                    font-size: 11px;
+                }
+                .skill-percent {
+                    top: -70px;
+                    font-size: 16px;
+                }
+                .skill-bar {
+                    width: 30px;
+                }
+                .skill-line {
+                    top: -70px;
+                    height: 70px;
+                }
+            }
+        }
+    }
+
+    .projects {
+        .grid {
+            padding: 220px 20px 100px 20px;
+        }
+
+        .section-title {
+            top: 60px;
+            font-size: 16px;
+            transform: translateX(-100px);
+            &::after {
+                margin-left: -60px;
+                width: 80px;
+            }
+        }
+
+        .project-list {
+            margin-bottom: 100px;
+            li {
+                width: 100%;
+                margin-bottom: 80px;
+                &:nth-child(odd) {
+                    .project-item {
+                        width: 45%;
+                        margin-top: 30px;
+                        margin-right: 5%;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+                &:nth-child(even) {
+                    .project-item {
+                        width: 45%;
+                        margin-top: 30px;
+                        margin-left: 5%;
+                        &:last-child {
+                            margin-left: 0;
+                        }
+                    }
+                }
+                .project-list-icon {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 15px;
+                }
+                .project-list-title {
+                    font-size: 16px;
+                    margin-top: 6px;
+                }
+                .line {
+                    display: none;
+                }
+                .project-list-tags {
+                    font-size: 8px;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+
+    .outro {
+        height: 800px;
+        .section-title {
+            top: 20px;
+            left: 20px;
+            font-size: 16px;
+            &::after {
+                margin-top: -60px;
+                height: 80px;
+            }
+        }
+
+        .contents {
+            margin-top: 430px;
+            .title {
+                font-size: 26px;
+                letter-spacing: 5px;
+            }
+            .sub-title {
+                font-size: 14px;
+            }
+            .e-mail {
+                font-size: 12px;
+                padding: 16px 22px;
+                margin-top: 40px;
+                margin-right: 20px;
+            }
+            .btn-github {
+                margin-top: 20px;
+                margin-left: 0;
+                a {
+                    font-size: 12px;
+                    padding: 16px 22px;
+                }
+            }
+        }
+        .copyright {
+            font-size: 12px;
+        }
+
+        .stars {
+            top: 120px;
+        }
+        .city-reflected {
+            width: 200%;
+            bottom: 142px;
+        }
+        .moon-reflected {
+            width: 340px;
+            bottom: 124px;
+            right: -90px;
+        }
+        .water {
+            height: 380px;
+        }
+
+        .leaf {
+            width: 133px;
+            &.left {
+                bottom: -16px;
+                left: 36px;
+            }
+            &.right {
+                bottom: -16px;
+                right: -92px;
+            }
+        }
+
+        .leaf-double {
+            width: 153px;
+            &.left {
+                bottom: -12px;
+                left: -46px;
+            }
+            &.right {
+                bottom: 4px;
+                right: -200px;
+            }
+        }
+    }
+}
+
+// 1024px 이하 팝업창 스타일
+@media screen and (max-width: 1024px) {
+    .project-popup {
+        padding: 50px;
+        box-sizing: border-box;
+    }
+
+    .project-popup .btn-esc {
+        top: calc(35% + 50px);
+    }
+
+    .project-popup-inner {
+        margin-top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .project-popup .project-img {
+        width: 100%;
+        height: 35%;
+        float: unset;
+        border-radius: 25px 25px 0 0;
+    }
+
+    .project-popup .project-contents {
+        width: 100%;
+        height: 65%;
+        float: unset;
+        padding: 50px;
+        font-size: 14px;
+        .data-title {
+            font-size: 32px;
+        }
+        .line {
+            display: none;
+        }
+    }
+
+    .project-popup .project-contents .btn-go-site {
+        width: 50%;
+        height: 50px;
+        a {
+            width: 100%;
+            height: 100%;
+            line-height: 50px;
+        }
+    }
+}
+
+// 600px 이하 팝업창 스타일
+@media screen and (max-width: 600px) {
+    .project-popup {
+        padding: 80px 20px 20px 20px;
+        .project-popup-inner {
+            overflow: hidden scroll;
+            &::-webkit-scrollbar {
+                width: 5px;
+                background-color: rgba(0, 0, 0, 0.05);
+            }
+            &::-webkit-scrollbar-thumb {
+                border-radius: 2px;
+                background-color: rgb(116, 116, 116);
+            }
+        
+        }
+
+        .project-img {
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+        }
+        .project-contents {
+            height: 100%;
+            padding: 30px;
+            overflow: hidden;
+            .data-title {
+                font-size: 28px;
+            }
+            .data-text {
+                font-size: 13px;
+                line-height: 18px;
+            }
+            .data-tags {
+                font-size: 12px;
+            }
+            .btn-go-site {
+                height: 40px;
+                a {
+                    font-size: 13px;
+                    line-height: 40px;
+                }
+            }
+        }
+
+        .btn-esc {
+            display: none;
+        }
+        .btn-esc-white {
+            display: block;
+        }
+    }
+}

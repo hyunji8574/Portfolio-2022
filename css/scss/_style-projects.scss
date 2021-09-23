@@ -49,15 +49,21 @@
             .project-item {
                 float: left;
                 margin-right: 348px;
+                &:last-child {
+                    margin-right: 0;
+                }    
             }
 
             &:nth-child(even) {
                 float: right;
                 text-align: right;
                 .project-item {
-                    float: left;
+                    float: right;
                     margin-right: unset;
                     margin-left: 348px;
+                    &:last-child {
+                        margin-left: 0;
+                    }        
                 }
             }
 

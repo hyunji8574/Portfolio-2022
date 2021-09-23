@@ -135,11 +135,11 @@ index 스타일시트
   .btn-lnb:hover {
     cursor: pointer; }
     .btn-lnb:hover .bar1 {
-      width: 27px; }
+      width: 70%; }
     .btn-lnb:hover .bar2 {
       width: 100%; }
     .btn-lnb:hover .bar3 {
-      width: 27px; }
+      width: 70%; }
   .btn-lnb-bar {
     width: 100%;
     height: 4px;
@@ -150,7 +150,7 @@ index 스타일시트
   .btn-lnb.black .btn-lnb-bar {
     background-color: #0c1124; }
   .btn-lnb .bar2 {
-    width: 27px; }
+    width: 70%; }
 
 .lnb {
   position: fixed;
@@ -408,7 +408,8 @@ index
     .intro .info p {
       font-size: 18px;
       margin-bottom: 63px;
-      line-height: 36px; }
+      line-height: 36px;
+      word-break: keep-all; }
       .intro .info p:last-child {
         margin-bottom: 0; }
 
@@ -628,13 +629,17 @@ index
       .projects .project-list li .project-item {
         float: left;
         margin-right: 348px; }
+        .projects .project-list li .project-item:last-child {
+          margin-right: 0; }
       .projects .project-list li:nth-child(even) {
         float: right;
         text-align: right; }
         .projects .project-list li:nth-child(even) .project-item {
-          float: left;
+          float: right;
           margin-right: unset;
           margin-left: 348px; }
+          .projects .project-list li:nth-child(even) .project-item:last-child {
+            margin-left: 0; }
       .projects .project-list li .project-list-icon {
         display: inline-block;
         width: 162px;
@@ -932,6 +937,7 @@ index
     background-color: #fff;
     border-radius: 25px; }
   .project-popup .btn-esc {
+    display: block;
     position: absolute;
     top: 50px;
     right: 50px;
@@ -939,6 +945,17 @@ index
     height: 35px; }
     .project-popup .btn-esc:hover {
       cursor: pointer; }
+  .project-popup .btn-esc-white {
+    display: none;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 30px;
+    right: 20px; }
+    .project-popup .btn-esc-white:hover {
+      cursor: pointer; }
+    .project-popup .btn-esc-white img {
+      width: 100%; }
   .project-popup .project-img {
     width: 50%;
     height: 100%;
@@ -1008,3 +1025,357 @@ index
         .project-popup .project-contents .btn-go-site a:hover {
           background-color: #0c1124;
           color: #fff; }
+
+/*
+
+반응형 스타일
+
+*/
+@media screen and (max-width: 1440px) {
+  .grid {
+    padding: 0 50px; }
+  .lnb {
+    padding: 90px 70px; }
+    .lnb li {
+      height: 90px; }
+      .lnb li a {
+        font-size: 20px;
+        line-height: 90px; }
+  .index .title-wrap .title {
+    font-size: 58px; }
+  .intro .grid {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 300px; }
+  .intro .info {
+    margin-top: 170px;
+    width: 60%; }
+    .intro .info p {
+      margin-bottom: 50px; }
+  .intro .building {
+    width: 240px;
+    height: unset;
+    right: 50px; }
+  .about .moon-big {
+    width: 840px;
+    height: 840px; }
+  .about .about-list .list-title {
+    margin-top: 20px; }
+  .about .about-list li:nth-child(odd) {
+    left: 50px;
+    transform: translate(0);
+    text-align: left; }
+    .about .about-list li:nth-child(odd) .list-title {
+      text-align: left; }
+  .about .about-list li:nth-child(even) {
+    right: 50px;
+    transform: translate(0);
+    text-align: right; }
+    .about .about-list li:nth-child(even) .list-title {
+      text-align: right; }
+  .projects .grid {
+    padding-left: 50px;
+    padding-right: 50px; }
+  .projects .project-list li .project-item {
+    margin-right: 120px;
+    float: left; }
+  .projects .project-list li:nth-child(even) .project-item {
+    margin-left: 120px;
+    float: right; }
+  .outro .stars {
+    width: 1200px; }
+  .outro .contents {
+    margin-top: 628px; }
+    .outro .contents .title {
+      font-size: 36px;
+      letter-spacing: 7px; }
+  .outro .moon-reflected {
+    width: 500px;
+    bottom: -80px;
+    right: -90px; } }
+
+@media screen and (max-width: 600px) {
+  .grid {
+    padding: 0 20px; }
+  .btn-lnb {
+    top: 30px;
+    left: 20px; }
+  .lnb {
+    width: 100%;
+    height: 100%;
+    left: -100%; }
+  .index .title-wrap .title {
+    font-size: 38px;
+    letter-spacing: 10px; }
+  .index .text.top {
+    top: 20px; }
+  .index .text.bottom {
+    bottom: 20px; }
+  .index .text.right {
+    right: 20px; }
+  .index .text.left {
+    left: 20px; }
+  .index .line {
+    top: 60%;
+    right: 30px;
+    height: 120px; }
+  .index .moon {
+    width: 600px;
+    top: -200px;
+    right: -200px; }
+  .index .stars {
+    width: 100%;
+    top: 130px;
+    right: 0; }
+  .index .btn-scroll-down {
+    margin-top: 60px; }
+    .index .btn-scroll-down a {
+      padding: 21px 36px;
+      font-size: 14px; }
+  .index .city1,
+  .index .city2,
+  .index .city3 {
+    width: 800px; }
+  .intro .grid {
+    padding-top: 270px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 130px; }
+  .intro .section-title {
+    top: 20px;
+    left: 20px;
+    font-size: 16px; }
+    .intro .section-title::after {
+      margin-top: -60px;
+      height: 80px; }
+  .intro .hello-en {
+    font-size: 16px;
+    letter-spacing: 8px; }
+  .intro .hello-ko {
+    font-size: 16px; }
+  .intro .line-center {
+    margin-top: 50px; }
+  .intro .info {
+    margin-top: 100px;
+    width: 100%; }
+    .intro .info p {
+      font-size: 90%;
+      line-height: 22px; }
+  .intro .building {
+    display: none; }
+  .about {
+    background-size: 1220px, contain, contain;
+    height: 3750px; }
+    .about .section-title.-about {
+      right: 20px;
+      top: 20px;
+      font-size: 16px; }
+      .about .section-title.-about::after {
+        margin-bottom: -54px;
+        height: 80px; }
+    .about .moon-big {
+      width: 400px;
+      height: 400px; }
+    .about .about-list li .list-title {
+      font-size: 18px; }
+    .about .about-list li .list-text {
+      margin-top: 16px;
+      font-size: 12px;
+      line-height: 16px; }
+    .about .about-list li:nth-child(odd) {
+      left: 20px; }
+    .about .about-list li:nth-child(even) {
+      right: 20px; }
+    .about .section-title.-skills {
+      right: 20px;
+      bottom: 442px;
+      font-size: 16px; }
+      .about .section-title.-skills::after {
+        margin-bottom: -54px;
+        height: 80px; }
+    .about .skills-list {
+      padding: 0 20px;
+      box-sizing: border-box; }
+      .about .skills-list li:nth-child(1) {
+        height: calc(250px * 0.8); }
+      .about .skills-list li:nth-child(2) {
+        height: calc(250px * 0.9); }
+      .about .skills-list li:nth-child(3) {
+        height: calc(250px * 0.7); }
+      .about .skills-list li .skill-title {
+        left: 30px;
+        font-size: 16px; }
+      .about .skills-list li .skill-sub-title {
+        bottom: 2px;
+        font-size: 11px; }
+      .about .skills-list li .skill-percent {
+        top: -70px;
+        font-size: 16px; }
+      .about .skills-list li .skill-bar {
+        width: 30px; }
+      .about .skills-list li .skill-line {
+        top: -70px;
+        height: 70px; }
+  .projects .grid {
+    padding: 220px 20px 100px 20px; }
+  .projects .section-title {
+    top: 60px;
+    font-size: 16px;
+    transform: translateX(-100px); }
+    .projects .section-title::after {
+      margin-left: -60px;
+      width: 80px; }
+  .projects .project-list {
+    margin-bottom: 100px; }
+    .projects .project-list li {
+      width: 100%;
+      margin-bottom: 80px; }
+      .projects .project-list li:nth-child(odd) .project-item {
+        width: 45%;
+        margin-top: 30px;
+        margin-right: 5%; }
+        .projects .project-list li:nth-child(odd) .project-item:last-child {
+          margin-right: 0; }
+      .projects .project-list li:nth-child(even) .project-item {
+        width: 45%;
+        margin-top: 30px;
+        margin-left: 5%; }
+        .projects .project-list li:nth-child(even) .project-item:last-child {
+          margin-left: 0; }
+      .projects .project-list li .project-list-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 15px; }
+      .projects .project-list li .project-list-title {
+        font-size: 16px;
+        margin-top: 6px; }
+      .projects .project-list li .line {
+        display: none; }
+      .projects .project-list li .project-list-tags {
+        font-size: 8px;
+        margin-top: 5px; }
+  .outro {
+    height: 800px; }
+    .outro .section-title {
+      top: 20px;
+      left: 20px;
+      font-size: 16px; }
+      .outro .section-title::after {
+        margin-top: -60px;
+        height: 80px; }
+    .outro .contents {
+      margin-top: 430px; }
+      .outro .contents .title {
+        font-size: 26px;
+        letter-spacing: 5px; }
+      .outro .contents .sub-title {
+        font-size: 14px; }
+      .outro .contents .e-mail {
+        font-size: 12px;
+        padding: 16px 22px;
+        margin-top: 40px;
+        margin-right: 20px; }
+      .outro .contents .btn-github {
+        margin-top: 20px;
+        margin-left: 0; }
+        .outro .contents .btn-github a {
+          font-size: 12px;
+          padding: 16px 22px; }
+    .outro .copyright {
+      font-size: 12px; }
+    .outro .stars {
+      top: 120px; }
+    .outro .city-reflected {
+      width: 200%;
+      bottom: 142px; }
+    .outro .moon-reflected {
+      width: 340px;
+      bottom: 124px;
+      right: -90px; }
+    .outro .water {
+      height: 380px; }
+    .outro .leaf {
+      width: 133px; }
+      .outro .leaf.left {
+        bottom: -16px;
+        left: 36px; }
+      .outro .leaf.right {
+        bottom: -16px;
+        right: -92px; }
+    .outro .leaf-double {
+      width: 153px; }
+      .outro .leaf-double.left {
+        bottom: -12px;
+        left: -46px; }
+      .outro .leaf-double.right {
+        bottom: 4px;
+        right: -200px; } }
+
+@media screen and (max-width: 1024px) {
+  .project-popup {
+    padding: 50px;
+    box-sizing: border-box; }
+  .project-popup .btn-esc {
+    top: calc(35% + 50px); }
+  .project-popup-inner {
+    margin-top: 0;
+    width: 100%;
+    height: 100%; }
+  .project-popup .project-img {
+    width: 100%;
+    height: 35%;
+    float: unset;
+    border-radius: 25px 25px 0 0; }
+  .project-popup .project-contents {
+    width: 100%;
+    height: 65%;
+    float: unset;
+    padding: 50px;
+    font-size: 14px; }
+    .project-popup .project-contents .data-title {
+      font-size: 32px; }
+    .project-popup .project-contents .line {
+      display: none; }
+  .project-popup .project-contents .btn-go-site {
+    width: 50%;
+    height: 50px; }
+    .project-popup .project-contents .btn-go-site a {
+      width: 100%;
+      height: 100%;
+      line-height: 50px; } }
+
+@media screen and (max-width: 600px) {
+  .project-popup {
+    padding: 80px 20px 20px 20px; }
+    .project-popup .project-popup-inner {
+      overflow: hidden scroll; }
+      .project-popup .project-popup-inner::-webkit-scrollbar {
+        width: 5px;
+        background-color: rgba(0, 0, 0, 0.05); }
+      .project-popup .project-popup-inner::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+        background-color: #747474; }
+    .project-popup .project-img {
+      width: 100%;
+      height: 50%;
+      overflow: hidden; }
+    .project-popup .project-contents {
+      height: 100%;
+      padding: 30px;
+      overflow: hidden; }
+      .project-popup .project-contents .data-title {
+        font-size: 28px; }
+      .project-popup .project-contents .data-text {
+        font-size: 13px;
+        line-height: 18px; }
+      .project-popup .project-contents .data-tags {
+        font-size: 12px; }
+      .project-popup .project-contents .btn-go-site {
+        height: 40px; }
+        .project-popup .project-contents .btn-go-site a {
+          font-size: 13px;
+          line-height: 40px; }
+    .project-popup .btn-esc {
+      display: none; }
+    .project-popup .btn-esc-white {
+      display: block; } }
