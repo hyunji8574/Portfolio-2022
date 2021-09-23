@@ -1,6 +1,7 @@
 # Night To Light | Portfolio
 
-최신 업데이트: 2021-09-09
+최신 업데이트: 2021-09-23
+상세: 모바일에 맞춘 반응형 레이아웃 업데이트
 
 ### 디렉토리
 - css
@@ -14,6 +15,7 @@
     - _style-others.scss
     - _style-outro.scss
     - _style-projects.scss
+    - _style-responsive.scss
     - index.scss
   - index.css
 - fonts
