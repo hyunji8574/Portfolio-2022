@@ -77,7 +77,6 @@ window.onload = function () {
     // 메뉴 클릭 이벤트
     $lnb.addEventListener("click", function (e) {
         var targetAnchor = e.target.hash;
-        var targetClass = e.target.classList;
         scrollMagic.scrollTo(targetAnchor);
         e.preventDefault();
     });
