@@ -1,5 +1,8 @@
 # Night To Light | Portfolio
 
+### 최근 업데이트
+- github.io를 이용한 포트폴리오로 변경
+
 ### 디렉토리
 - css
   - scss
