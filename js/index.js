@@ -81,14 +81,6 @@ window.onload = function () {
     //     e.preventDefault();
     // });
 
-    // 메뉴 클릭 이벤트
-    $lnb.addEventListener("click", function (e) {
-        var targetAnchor = e.target.hash;
-        var targetTop = document.querySelector(targetAnchor).offsetTop;
-        window.scrollTo({ top: targetTop, left: 0, behavior: "smooth" });
-        e.preventDefault();
-    });
-
     // 각 섹션 타이틀 페이드 인
     $sections.forEach(e => {
         var section_title_anim = TweenMax.fromTo(e.querySelector(".section-title"), {
