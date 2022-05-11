@@ -67,17 +67,25 @@ window.onload = function () {
      */
     var scrollMagic = new ScrollMagic.Controller();
 
-    // 메뉴 클릭시 각 앵커로 슬라이드
-    scrollMagic.scrollTo(function (target) {
-        TweenMax.to(window, 1, {
-            scrollTo: { y: target }
-        });
-    });
+    // // 메뉴 클릭시 각 앵커로 슬라이드
+    // scrollMagic.scrollTo(function (target) {
+    //     TweenMax.to(window, 1, {
+    //         scrollTo: { y: target }
+    //     });
+    // });
+
+    // // 메뉴 클릭 이벤트
+    // $lnb.addEventListener("click", function (e) {
+    //     var targetAnchor = e.target.hash;
+    //     scrollMagic.scrollTo(targetAnchor);
+    //     e.preventDefault();
+    // });
 
     // 메뉴 클릭 이벤트
     $lnb.addEventListener("click", function (e) {
         var targetAnchor = e.target.hash;
-        scrollMagic.scrollTo(targetAnchor);
+        var targetTop = document.querySelector(targetAnchor).offsetTop;
+        window.scrollTo({ top: targetTop, left: 0, behavior: "smooth" });
         e.preventDefault();
     });
 
