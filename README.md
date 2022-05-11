@@ -2,6 +2,7 @@
 
 ### 최근 업데이트
 - github.io를 이용한 포트폴리오로 변경
+- 사이트 보기 >> https://hyunji8574.github.io/Portfolio-2022/
 
 ### 디렉토리
 - css
