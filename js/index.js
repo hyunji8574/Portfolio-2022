@@ -67,12 +67,20 @@ window.onload = function () {
      */
     var scrollMagic = new ScrollMagic.Controller();
 
-    // 메뉴 클릭 이벤트
+    // // 메뉴 클릭시 각 앵커로 슬라이드
+    // $lnb.addEventListener("click", function (e) {
+    //     var targetAnchor = e.target.hash;
+    //     TweenMax.to(window, 1, {
+    //         scrollTo: { y: targetAnchor }
+    //     });
+    //     e.preventDefault();
+    // });
+    
+    // 메뉴 클릭시 각 앵커로 슬라이드
     $lnb.addEventListener("click", function (e) {
         var targetAnchor = e.target.hash;
-        TweenMax.to(window, 1, {
-            scrollTo: { y: targetAnchor }
-        });
+        var targetTop = document.querySelector(targetAnchor).offsetTop; 
+        window.scrollTo({ top: targetTop, left: 0, behavior: "smooth" });
         e.preventDefault();
     });
 
@@ -165,7 +173,7 @@ window.onload = function () {
     var outro_scene = new ScrollMagic.Scene({
         triggerElement: "#outro",
         triggerHook: 0.1
-    })
+        })
         .setTween(outro_anim)
         .addTo(scrollMagic);
 
@@ -225,7 +233,7 @@ window.onload = function () {
         $project_popup.classList.remove("on");
         e.preventDefault();
     });
-
+    
     $btn_esc_white.addEventListener("click", function (e) {
         $project_popup.classList.remove("on");
         e.preventDefault();
